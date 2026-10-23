@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PAS UEM 2026 – Conteúdos</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1d2330;--mu:#5b6475;--ac:#1f7a4d;--bd:#e1e5ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171c;--card:#1d222a;--tx:#e8ebf0;--mu:#9aa3b2;--ac:#5fd39a;--bd:#2c333d}}
+:root[data-theme="dark"]{--bg:#14171c;--card:#1d222a;--tx:#e8ebf0;--mu:#9aa3b2;--ac:#5fd39a;--bd:#2c333d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:28px 18px 8px;max-width:960px;margin:auto}
+h1{margin:0;font-size:1.7rem}header p{margin:4px 0 0;color:var(--mu)}
+nav{display:flex;gap:8px;max-width:960px;margin:14px auto;padding:0 18px}
+nav button{flex:1;padding:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font:inherit;font-weight:600;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:960px;margin:auto;padding:0 18px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+section{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+h2{margin:0 0 6px;font-size:1.05rem;color:var(--ac)}
+ul{margin:0;padding-left:18px}li{margin:2px 0;font-size:.95rem}
+</style></head><body>
+<header><h1>PAS UEM 2026</h1><p>Conteúdos por etapa e disciplina · Prova em 1º de novembro</p></header>
+<nav id="tabs"></nav><main id="out"></main>
+<script>
+const D={
+"Etapa 1 · 1º ano":[
+["Redação","Carta de solicitação|Comentário de postagens|Resposta argumentativa"],
+["Português","Compreensão e interpretação de textos|Gêneros do discurso: produção, estrutura e estilo|Funções sintáticas e sentido|Variação linguística do português brasileiro|Coesão: organizadores e conectivos|Argumentos e contra-argumentos|Vozes sociais|Discurso oral|Modalizadores|Período simples"],
+["Literatura","Ana Maria Machado – Isso ninguém me tira|Gregório de Matos (5 poemas)|Tomás A. Gonzaga – Marília de Dirceu (4 poemas)|Cláudio Manuel da Costa (5 poemas)|Camões (5 sonetos)|Paulo Leminski (6 poemas)|Veríssimo – 5 crônicas (Vivendo e…, Sexa, Papos, Hábito nacional, Segurança)|Pepetela – A montanha da água lilás"],
+["Espanhol","Pronomes pessoais (incl. vos)|Artigos|Substantivos|Adjetivos|Possessivos, demonstrativos, numerais|Verbos (indicativo)|Acentuação"],
+["Francês","Vocabulário e sinonímia|Artigos, demonstrativos, possessivos, indefinidos|Pronomes sujeito; negação ne…pas|Advérbios simples|Coordenadas enunciativas|Presente, passé composé, futuro simples, imperfeito"],
+["Inglês","Gêneros cotidianos, de imprensa e mídia|Ideia principal, detalhes, inferências|Pronomes, artigos, plural|Simple present, present continuous, simple past, past continuous|Futuro simples e imediato|Imperative, there to be, question words|Preposições in/on/at, quantifiers, frequency adverbs"],
+["Arte","Música: som, ruído, parâmetros, instrumentos, música contemporânea, samba, bossa nova, rock|Artes visuais: arte moderna latino-americana, arte contemporânea, arte e política|Teatro: improvisação, elementos da linguagem, espectador, cultura e diversidade|Dança: elementos, contemporânea, danças brasileiras"],
+["Educação Física","Jogos cooperativos|Dança de salão|Ginástica de condicionamento|Esporte plural e mídias digitais|Lutas: valores e cultura de movimento"],
+["Filosofia","Origem da filosofia e filosofia grega|Teoria do conhecimento: ceticismo, racionalismo, empirismo, idealismo|Lógica: inferências, silogismo, falácias"],
+["Geografia","Conceitos, localização, fusos, cartografia|Geologia, relevo, clima, biomas, solos, hidrografia|Recursos naturais, energia e impactos|Paraná e o global"],
+["História","Grécia e Roma|Idade Média|História Moderna: crise feudal, Estados nacionais, grandes navegações|Brasil colonial|Colonização do Paraná"],
+["Sociologia","Pensamento sociológico: indivíduo e sociedade|Socialização, instituições e juventude|Mundo do trabalho: organização e divisão"],
+["Matemática","Matrizes e sistemas lineares|Números reais, medidas, unidades, notação científica|Matemática financeira: proporção, porcentagem, juros, médias|Estatística e gráficos"],
+["Biologia","Seres vivos e origem da vida|Biologia celular: metabolismo, DNA/RNA, síntese proteica, cariótipo, divisão celular|Reprodução, gametas, fecundação, contracepção e IST|Histologia|Ciência e saúde"],
+["Física","Grandezas, unidades e vetores|Cinemática: MU, MUV, queda livre, projéteis, MCU|Leis de Newton, forças, plano inclinado|Gravitação e Kepler|Quantidade de movimento e impulso|Trabalho, energia, potência, colisões|Equilíbrio e máquinas simples"],
+["Química","Estados da matéria, misturas, modelos atômicos, tabela periódica|Ligações químicas e interações intermoleculares|Radioatividade|Cálculos químicos: balanceamento, leis, estequiometria|Funções inorgânicas"]],
+"Etapa 2 · 2º ano":[
+["Redação","Carta de solicitação|Comentário crítico de postagens|Resposta argumentativa|Artigo de opinião"],
+["Português","Interpretação de textos e gêneros|Regência, concordância, colocação pronominal|Formação e funcionamento das palavras|Período composto|Coesão e conectivos|Sinonímia, antonímia, paronímia, polissemia, denotação e conotação|Figuras de linguagem|Vozes sociais, discurso oral, modalizadores"],
+["Literatura","Gonçalves Dias, Álvares de Azevedo, Castro Alves (poemas)|Olavo Bilac, Cruz e Sousa, Augusto dos Anjos (poemas)|Machado de Assis: A cartomante, A causa secreta, Conto de escola|Lima Barreto: 3 contos|Antero de Quental (poemas)|Jarid Arraes – cordéis|Mia Couto – 3 contos"],
+["Espanhol","Pronomes, artigos, substantivos, adjetivos, advérbios|Possessivos, demonstrativos, numerais|Verbos: indicativo, presente de subjuntivo, imperativo afirmativo|Conjunções, preposições, indefinidos, pronomes complemento, apócopes|Acentuação"],
+["Francês","Sinonímia e antonímia|Artigos, demonstrativos, possessivos, indefinidos|Negação simples e complexa|Advérbios e locuções adverbiais|Presente, passé composé, futuro, imperfeito, mais-que-perfeito, subjuntivo presente"],
+["Inglês","Gêneros literários, científicos, escolares e publicitários|Phrasal verbs, genitive case|Present perfect, past perfect|Comparatives, adjectives, adverbs, conjunctions|Emphasizers, modal verbs|Pronomes reflexivos, relativos e indefinidos|Conditionals 1st/2nd, prepositions"],
+["Arte","Música: voz, música corporal, orquestra, período moderno e romântico, MPB, sertaneja|Artes visuais: neoclassicismo, Renascimento, Barroco|Teatro: engajado e Oprimido, criação compartilhada paranaense|Dança: corpo, moderna, folclóricas"],
+["Educação Física","Jogos competitivos e cooperativos; populares x eletrônicos|Esporte adaptado e inclusão|Ginástica, saúde e doenças crônicas|Danças de rua|Lutas e subdivisões"],
+["Filosofia","Ética: virtude, deontologia, utilitarismo|Direitos humanos, bioética, ética ambiental|Filosofia política: pólis, Estado moderno, formas de governo|Liberalismo, socialismo, contratualismo, justiça distributiva"],
+["Geografia","Brasil: relevo, clima, bacias, biomas, domínios morfoclimáticos|Recursos naturais e impactos|Industrialização e matriz energética|Espaço rural|Urbanização|Espaço em rede|Demografia e migrações|Diversidade cultural|Regionalização|Paraná"],
+["História","Renascimento, Reforma, revolução científica|Colonização das Américas e mercantilismo|Indígenas e conquista|Revoluções burguesas|Revolução Industrial|Liberalismo e protecionismo|Independências nas Américas|Conservadorismo, nacionalismo, socialismo|Estados Unidos|Brasil Império|Paraná no século XIX"],
+["Sociologia","Origem da sociologia: Marx, Weber, Durkheim; teorias contemporâneas; método|Cultura: etnografia, diversidade, etnocentrismo, matrizes brasileiras|Trabalho: formas, capitalismo, tecnologia e globalização"],
+["Matemática","Análise combinatória e probabilidade|Geometria plana: congruência, semelhança, relações métricas|Trigonometria no triângulo retângulo, leis dos senos e cossenos|Áreas de figuras planas|Funções do 1º e do 2º grau"],
+["Biologia","Classificação e nomenclatura|Vírus|Reinos e doenças|Fisiologia animal e reprodução humana|Botânica|Ciência e saúde"],
+["Física","Hidrostática e hidrodinâmica: densidade, pressão, Pascal, empuxo, Bernoulli|Termologia: temperatura, dilatação, gases, calor, termodinâmica"],
+["Química","Soluções|Cinética química|Equilíbrio químico, pH e pOH|Termoquímica"]],
+"Etapa 3 · 3º ano":[
+["Redação","Carta de solicitação|Comentário crítico de postagens|Resposta argumentativa|Artigo de opinião|Carta aberta"],
+["Português","Interpretação de textos e gêneros|Regência, concordância, colocação pronominal|Formação das palavras|Período simples e composto|Coesão e coerência|Sentidos e figuras de linguagem|Pontuação|Modalizadores, discurso oral, argumentação"],
+["Literatura","Poesia: Bandeira, Drummond, Cecília Meireles, Vinícius, João Cabral, Leminski, Adélia Prado, Elisa Lucinda|Menino de engenho (José Lins do Rego)|Quarto de despejo (Carolina Maria de Jesus)|Contos: Clarice Lispector, Conceição Evaristo, Dalton Trevisan|O santo inquérito (Dias Gomes)|Fernando Pessoa e heterônimos|Mia Couto – 3 contos"],
+["Espanhol","Tudo da Etapa 2, mais:|Subjuntivo e imperativo negativo|Formas não pessoais do verbo|Interjeições, pronomes relativos|Discurso direto e indireto|Variação dialetal"],
+["Francês","Sinonímia, antonímia, hiperonímia|Negação complexa, pronomes complemento direto e indireto|Advérbios, locuções e conjunções|Tempos do indicativo, subjuntivo presente e passado"],
+["Inglês","Gêneros políticos, jurídicos e de consumo|Revisão de tempos verbais, present/past perfect|Conditional 3rd type, modal verbs|Gerund/infinitive, conjunctions, adverbs|Passive voice, reported speech|Cognates, affixes, question tags"],
+["Arte","Música: tecnologia, período clássico, tropicália, manguebeat, funk, rap, eletrônica|Artes visuais: medieval, greco-romana, egípcia, pré-histórica|Teatro: dramaturgias contemporâneas, acessibilidade, performance, políticas culturais|Dança: de salão, clássica"],
+["Educação Física","Jogos, mídias e culturas digitais|Esporte de rendimento|Circo|Dança e indústria cultural|Lutas e mídias digitais|Capoeira|Práticas corporais de aventura|Atualidades"],
+["Filosofia","Filosofia da ciência: paradigmas, positivismo, historicismo, ciência e poder|Estética: belo, sublime, juízo de gosto, indústria cultural|Metafísica: universais, cinco vias de Tomás de Aquino, homem voador de Avicena"],
+["Geografia","Revolução técnico-científico-informacional|Nova ordem mundial, globalização, geopolítica, blocos econômicos|Questão ambiental|Espaço em rede, cidades globais, megacidades|Demografia mundial|Diversidade cultural|Comércio|Regionalização Norte-Sul"],
+["História","Cidadania, Estado brasileiro, eleições, partidos, voto feminino|Autoritarismos, Diretas Já, Constituição de 1988|Juventudes (UNE, UPES) e mulheres|Movimentos sociais, política ambiental|Povos indígenas e questão racial|Agronegócio, urbanização, favelização|Globalização, guerras, pandemias, direitos humanos, tecnologia e trabalho|Paraná: indígenas, população negra, quilombolas, mulheres, conflitos agrários, operários"],
+["Sociologia","Poder, Estado e sociedade|Regimes de governo, democracia, cidadania|Direitos humanos e combate ao preconceito|Trabalho, renda, desigualdades de gênero e raça"],
+["Matemática","Funções: 1º grau, 2º grau, exponencial, logarítmica|Progressões aritméticas e geométricas|Medidas: armazenamento de dados, graus e radianos|Trigonometria: triângulo retângulo, ciclo, seno e cosseno|Geometria: ângulos na circunferência, áreas, prismas, pirâmides, cilindro, cone, esfera"],
+["Biologia","Genética: síntese proteica, Mendel, grupos sanguíneos, herança ligada ao sexo, interações gênicas|Evolução: evidências, Lamarck, Darwin, teoria moderna, especiação, evolução humana|Ecologia: populações, comunidades, ecossistemas, ciclos, biomas, impactos ambientais|Ciência e saúde"],
+["Física","Eletrostática: carga, Coulomb, campo, potencial, capacitores|Eletrodinâmica: corrente, Ohm, circuitos, Kirchhoff, potência|Eletromagnetismo: ímãs, campo magnético, Lorentz, Faraday, Lenz|Óptica geométrica: espelhos, refração, lentes, olho humano|Ondulatória: ondas, interferência, som, Doppler"],
+["Química","Funções orgânicas e isomeria|Propriedades dos compostos orgânicos; carboidratos, lipídios, proteínas|Petróleo, etanol, óleos e gorduras, sabões, polímeros|Eletroquímica: oxirredução, pilhas, ddp, eletrólise"]]
+};
+const tabs=document.getElementById("tabs"),out=document.getElementById("out");
+function show(k){[...tabs.children].forEach(b=>b.classList.toggle("on",b.textContent===k));
+out.innerHTML=D[k].map(([t,s])=>"<section><h2>"+t+"</h2><ul>"+s.split("|").map(i=>"<li>"+i+"</li>").join("")+"</ul></section>").join("")}
+Object.keys(D).forEach(k=>{const b=document.createElement("button");b.textContent=k;b.onclick=()=>show(k);tabs.appendChild(b)});
+show(Object.keys(D)[0]);
+</script></body></html>
